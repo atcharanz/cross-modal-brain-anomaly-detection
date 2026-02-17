@@ -1,1 +1,110 @@
+# Cross-Modal Brain Anomaly Detection
+
+## Overview
+
+This project focuses on **unsupervised brain anomaly detection using cross-modal medical imaging** (MRI and CT).
+The goal is to learn **normal anatomical structure representations** and detect anomalies through **reconstruction error and latent-space inconsistency**.
+
+This approach is useful when **annotated medical anomaly datasets are limited or unavailable**.
+
+---
+
+## Problem Statement
+
+Medical anomaly detection often suffers from:
+
+* Lack of labeled anomaly data
+* High variability in imaging modalities
+* Domain differences between MRI and CT
+
+This project explores **cross-modal reconstruction learning** to detect abnormal regions without explicit anomaly labels.
+
+---
+
+## Approach
+
+The system uses:
+
+* Convolutional Autoencoder (CAE)
+* Variational Autoencoder (VAE)
+* Cross-modal reconstruction
+* Reconstruction-error anomaly maps
+
+Pipeline:
+
+```
+MRI/CT Input
+     ↓
+Encoder
+     ↓
+Latent Representation
+     ↓
+Decoder
+     ↓
+Reconstruction
+     ↓
+Error Map → Anomaly Detection
+```
+
+---
+
+Place datasets locally in:
+
+```
+datasets/
+```
+
+Example structure:
+
+```
+datasets/
+├── MRI/
+└── CT/
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/atcharanz/cross-modal-brain-anomaly-detection.git
+cd cross-modal-brain-anomaly-detection
+```
+
+
+
+## Evaluation
+
+Anomalies are detected using:
+
+* Reconstruction loss
+* Latent space deviation
+
+Example visualization:
+
+```
+Original Image
+Reconstructed Image
+Anomaly Heatmap
+```
+
+---
+
+## Key Ideas
+
+This project demonstrates:
+
+* Unsupervised anomaly detection
+* Representation learning in medical imaging
+* Cross-modal consistency learning
+* Autoencoder-based anomaly localization
+
+---
+
+
+## Author
+
+Charan C
 ₹
